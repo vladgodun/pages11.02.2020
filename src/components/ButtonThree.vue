@@ -1,65 +1,58 @@
 <template>
-  <div class="last-bu">
-    <div class="head-npc">
-      <button class="nyc">RSVP NYC</button>
-      <button class="miami">RSVP MIAMI</button>
-      <button class="montreal">RSVP MONTREAL</button>
-    </div>
+  <div class="buttons-wrapper">
+    <button class="buttons-wrapper__btn">rsvp nyc</button>
+    <button class="buttons-wrapper__btn">rsvp miami</button>
+    <button class="buttons-wrapper__btn">rsvp montreal</button>
   </div>
 </template>
 
 
-<script>
-export default {};
-</script>
 
-<style>
-.head-npc {
-  margin-top: 107px;
-  margin-left: 224px;
-  margin-top: 109px;
+<style lang="scss">
+@import "~@/assets/scss/variables.scss";
+
+.buttons-wrapper {
+  margin-top: 101px;
   display: flex;
-  flex-flow: row wrap;
-}
-.nyc {
-  background-color: #107598;
-  border-radius: 50px;
-  border: 2px solid #107598;
-  height: 65px;
-  width: 330px;
-  color: white;
-  font-size: 25px;
-  margin-right: 66px;
-  font-family: "VitoExtended", Bold;
-}
-.miami {
-  background-color: #107598;
-  border: 2px solid #107598;
-  height: 65px;
-  width: 326px;
-  border-radius: 50px;
-  color: white;
-  font-size: 25px;
-  margin-right: 62px;
-  font-family: "VitoExtended", Bold;
-}
-.montreal {
-  background-color: #107598;
-  border: 2px solid #107598;
-  height: 65px;
-  width: 330px;
-  border-radius: 50px;
-  color: white;
-  font-size: 25px;
-  font-family: "VitoExtended", Bold;
-  margin-right: 62px;
-}
+  justify-content: center;
+  flex-wrap: wrap;
 
-@media screen and(max-width:600px) {
-  .head-npc {
-    display: flex;
-    margin-left: 100px;
-    margin: auto;
+  &__btn {
+    background-color: $blue;
+    border-radius: 50px;
+    height: 65px;
+    width: 330px;
+    color: $white;
+    font-size: 25px;
+    font-family: "VitoExtended", Bold;
+    border: none;
+    text-transform: uppercase;
+
+    &:nth-child(2) {
+      margin: 0 65px;
+    }
+
+    @media screen and(max-width: 1200px) {
+      &:last-child {
+        margin-top: 65px;
+      }
+    }
+    @media screen and(max-width: 875px) {
+      border: 2px solid $blue;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      &:last-child {
+        margin-top: 40px;
+      }
+
+      &:nth-child(2) {
+        margin: 40px 0 0;
+      }
+    }
+  }
+
+  @media screen and(max-width:600px) {
+    margin-top: 50px;
   }
 }
 </style>

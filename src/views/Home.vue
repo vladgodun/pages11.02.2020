@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
-    <h1>Charidy Learning Series</h1>
-    <MediaResource />
-    <!-- <img alt="Vue logo" src="../assets/viceo.png" /> -->
-    <HelloWorld msg />
-    <ButtonThree />
+  <div class="home-wrapper">
+    <div class="home">
+      <HeadText />
+      <MediaResource />
+      <ButtonThree />
+    </div>
   </div>
 </template>
 
@@ -12,21 +12,34 @@
 // @ is an alias to /src
 import MediaResource from "@/components/MediaResource.vue";
 import ButtonThree from "@/components/ButtonThree.vue";
+import HeadText from "@/components/HeaderText.vue";
 
 export default {
   name: "Home",
   components: {
     MediaResource,
-    ButtonThree
+    ButtonThree,
+    HeadText
   }
 };
 </script>
+
 <style lang="scss">
-h1 {
-  color: #414359;
-  text-align: center;
-  font-family: "Open Sans", Regular;
-  font-size: 46px;
+@import "~@/assets/scss/variables.scss";
+
+.home {
+  max-width: 1460px;
+  margin: auto;
+  padding: 25px 35px 35px;
+
+  &-wrapper {
+    @media screen and (max-width: 700px) {
+      background: $blue;
+    }
+  }
+
+  @media screen and(max-width: 500px) {
+    padding: 15px 10px 20px;
+  }
 }
 </style>
-
