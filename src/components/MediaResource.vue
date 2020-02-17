@@ -52,25 +52,5 @@
   }
 }
 
-// .all-text {
-//   width: 551px;
-//   margin-bottom: 181px;
-//   margin-left: 101px;
-//   margin-top: 109px;
-// }
-// font-family: "VitoExtended";
-//   margin-top: 18px;
-//   margin-bottom: 18px;
-//   color: $black_light;
-// .text-adn-photo {
-//   justify-content: flex-end;
-//   margin-top: 109px;
-//   display: flex;
-//   flex-flow: row wrap;
-//   width: 100%;
-// }
 
-// p {
-//
-// }
 </style>
